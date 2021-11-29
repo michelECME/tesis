@@ -1,0 +1,25 @@
+{
+  "tesisApp": {
+    "cantidadXMarca": {
+      "home": {
+        "title": "Cantidad por marcas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cantidad X Marca",
+        "createOrEditLabel": "Create or edit a Cantidad X Marca",
+        "notFound": "No Cantidad X Marcas found"
+      },
+      "created": "A new Cantidad X Marca is created with identifier {{ param }}",
+      "updated": "A Cantidad X Marca is updated with identifier {{ param }}",
+      "deleted": "A Cantidad X Marca is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cantidad X Marca {{ id }}?"
+      },
+      "detail": {
+        "title": "Cantidad X Marca"
+      },
+      "id": "ID",
+      "cantidadMarca": "Cantidad Marca",
+      "modelo": "Modelo"
+    }
+  }
+}

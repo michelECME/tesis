@@ -1,0 +1,24 @@
+{
+  "name": "LUBRICANTEXUEB",
+  "fields": [
+    {
+      "fieldName": "cantidadLubricanteUEB",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "ueb",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "lubricantexueb",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210503223318"
+}

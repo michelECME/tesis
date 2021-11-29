@@ -1,0 +1,24 @@
+{
+  "name": "CantidadXMarca",
+  "fields": [
+    {
+      "fieldName": "cantidadMarca",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "modelo",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "cantidad_x_marca",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210503223315"
+}

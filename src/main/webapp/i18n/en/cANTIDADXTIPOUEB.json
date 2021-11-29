@@ -1,0 +1,26 @@
+{
+  "tesisApp": {
+    "cANTIDADXTIPOUEB": {
+      "home": {
+        "title": "Catidad por tipo en cada UEB",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new CANTIDADXTIPOUEB",
+        "createOrEditLabel": "Create or edit a CANTIDADXTIPOUEB",
+        "notFound": "No CANTIDADXTIPOUEBS found"
+      },
+      "created": "A new CANTIDADXTIPOUEB is created with identifier {{ param }}",
+      "updated": "A CANTIDADXTIPOUEB is updated with identifier {{ param }}",
+      "deleted": "A CANTIDADXTIPOUEB is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete CANTIDADXTIPOUEB {{ id }}?"
+      },
+      "detail": {
+        "title": "CANTIDADXTIPOUEB"
+      },
+      "id": "ID",
+      "cantidadTipoUEB": "Cantidad Tipo UEB",
+      "tipoCarro": "Tipo Carro",
+      "ueb": "Ueb"
+    }
+  }
+}

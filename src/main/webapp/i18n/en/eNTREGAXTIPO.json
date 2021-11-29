@@ -1,0 +1,25 @@
+{
+  "tesisApp": {
+    "eNTREGAXTIPO": {
+      "home": {
+        "title": "Entrega por tipo",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new ENTREGAXTIPO",
+        "createOrEditLabel": "Create or edit a ENTREGAXTIPO",
+        "notFound": "No ENTREGAXTIPOS found"
+      },
+      "created": "A new ENTREGAXTIPO is created with identifier {{ param }}",
+      "updated": "A ENTREGAXTIPO is updated with identifier {{ param }}",
+      "deleted": "A ENTREGAXTIPO is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete ENTREGAXTIPO {{ id }}?"
+      },
+      "detail": {
+        "title": "ENTREGAXTIPO"
+      },
+      "id": "ID",
+      "cantidad": "Cantidad",
+      "tipo": "Tipo"
+    }
+  }
+}

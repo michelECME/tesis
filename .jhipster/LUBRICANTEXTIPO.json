@@ -1,0 +1,24 @@
+{
+  "name": "LUBRICANTEXTIPO",
+  "fields": [
+    {
+      "fieldName": "cantidadLubricante",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lubricante",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "lubricantextipo",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210503223317"
+}

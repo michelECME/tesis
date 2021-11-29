@@ -1,0 +1,25 @@
+{
+  "tesisApp": {
+    "cantidadXUEB": {
+      "home": {
+        "title": "Cantidad por UEBS",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cantidad XUEB",
+        "createOrEditLabel": "Create or edit a Cantidad XUEB",
+        "notFound": "No Cantidad XUEBS found"
+      },
+      "created": "A new Cantidad XUEB is created with identifier {{ param }}",
+      "updated": "A Cantidad XUEB is updated with identifier {{ param }}",
+      "deleted": "A Cantidad XUEB is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cantidad XUEB {{ id }}?"
+      },
+      "detail": {
+        "title": "Cantidad XUEB"
+      },
+      "id": "ID",
+      "cantidadModelo": "Cantidad Modelo",
+      "ueb": "Ueb"
+    }
+  }
+}

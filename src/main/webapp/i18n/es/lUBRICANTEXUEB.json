@@ -1,0 +1,25 @@
+{
+  "tesisApp": {
+    "lUBRICANTEXUEB": {
+      "home": {
+        "title": "LUBRICANTEXUEBS",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo LUBRICANTEXUEB",
+        "createOrEditLabel": "Crear o editar LUBRICANTEXUEB",
+        "notFound": "Ningún LUBRICANTEXUEBS encontrado"
+      },
+      "created": "Un nuevo LUBRICANTEXUEB ha sido creado con el identificador {{ param }}",
+      "updated": "Un LUBRICANTEXUEB ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un LUBRICANTEXUEB ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar LUBRICANTEXUEB {{ id }}?"
+      },
+      "detail": {
+        "title": "LUBRICANTEXUEB"
+      },
+      "id": "ID",
+      "cantidadLubricanteUEB": "Cantidad Lubricante UEB",
+      "ueb": "Ueb"
+    }
+  }
+}

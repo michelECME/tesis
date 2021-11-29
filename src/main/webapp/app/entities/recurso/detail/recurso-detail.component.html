@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="recurso">
+      <h2 data-cy="recursoDetailsHeading"><span jhiTranslate="tesisApp.recurso.detail.title">Recurso</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ recurso.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.recurso.nombre">Nombre</span></dt>
+        <dd>
+          <span>{{ recurso.nombre }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.recurso.um">Um</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'tesisApp.UnidadDeMedida.' + recurso.um }}">{{ recurso.um }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.recurso.tipo">Tipo</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'tesisApp.TipoRecurso.' + recurso.tipo }}">{{ recurso.tipo }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/recurso', recurso.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

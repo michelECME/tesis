@@ -1,0 +1,37 @@
+{
+  "name": "Chofer",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "licencia",
+      "fieldType": "Licencia",
+      "fieldValues": "A_1,A,B,C_1,C,D_1,D,E,F"
+    },
+    {
+      "fieldName": "no_licencia",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "asignacion",
+      "otherEntityRelationshipName": "chofer",
+      "relationshipName": "asignacion"
+    }
+  ],
+  "entityTableName": "chofer",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210503223325"
+}

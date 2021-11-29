@@ -1,0 +1,25 @@
+{
+  "tesisApp": {
+    "lUBRICANTEXTIPO": {
+      "home": {
+        "title": "LUBRICANTEXTIPOS",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo LUBRICANTEXTIPO",
+        "createOrEditLabel": "Crear o editar LUBRICANTEXTIPO",
+        "notFound": "Ningún LUBRICANTEXTIPOS encontrado"
+      },
+      "created": "Un nuevo LUBRICANTEXTIPO ha sido creado con el identificador {{ param }}",
+      "updated": "Un LUBRICANTEXTIPO ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un LUBRICANTEXTIPO ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar LUBRICANTEXTIPO {{ id }}?"
+      },
+      "detail": {
+        "title": "LUBRICANTEXTIPO"
+      },
+      "id": "ID",
+      "cantidadLubricante": "Cantidad Lubricante",
+      "lubricante": "Lubricante"
+    }
+  }
+}

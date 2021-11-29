@@ -1,0 +1,25 @@
+{
+  "tesisApp": {
+    "lUBRICANTEXUEB": {
+      "home": {
+        "title": "Lubricantes por tipo en por UEB",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new LUBRICANTEXUEB",
+        "createOrEditLabel": "Create or edit a LUBRICANTEXUEB",
+        "notFound": "No LUBRICANTEXUEBS found"
+      },
+      "created": "A new LUBRICANTEXUEB is created with identifier {{ param }}",
+      "updated": "A LUBRICANTEXUEB is updated with identifier {{ param }}",
+      "deleted": "A LUBRICANTEXUEB is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete LUBRICANTEXUEB {{ id }}?"
+      },
+      "detail": {
+        "title": "LUBRICANTEXUEB"
+      },
+      "id": "ID",
+      "cantidadLubricanteUEB": "Cantidad Lubricante UEB",
+      "ueb": "Ueb"
+    }
+  }
+}

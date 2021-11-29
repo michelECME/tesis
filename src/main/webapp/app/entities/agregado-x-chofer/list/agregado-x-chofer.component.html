@@ -1,0 +1,51 @@
+<div>
+  <h2 id="page-heading" data-cy="AgregadoXChoferHeading">
+    <span >Reporte de agregados asignados a cada chofer</span>
+
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+  
+<br/> 
+<div id ="chart" style="text-align:center">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xaxis"
+      [title]="chartOptions.title"
+    ></apx-chart>
+  </div>
+  <br/>
+  <br/>
+  <button class="btn btn-info mr-2" (click)="exportAsExcelFile()" [disabled]="isLoading">
+    <fa-icon icon="save" [spin]="isLoading"></fa-icon>
+    <span >Exportar</span>
+  </button>
+  <br/>
+  <br/>
+  <span >Filtro</span>
+  
+
+  <input type="text" [(ngModel)]="filter" (ngModelChange)="filterAndSort()" class="form-control" />
+
+  <div class="table-responsive" id="entities" *ngIf="agregadoXChofers && agregadoXChofers.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="orderProp" [(ascending)]="ascending" [callback]="filterAndSort.bind(this)">
+          <th jhiSortBy="chapa" scope="col"><span jhiTranslate="tesisApp.agregadoXChofer.chapa">Chapa</span> <fa-icon icon="sort"></fa-icon></th>
+          <th jhiSortBy="recurso" scope="col"><span >Recurso</span> <fa-icon icon="sort"></fa-icon></th>
+          <th jhiSortBy="nombre" scope="col"><span >Nombre</span> <fa-icon icon="sort"></fa-icon></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let agregadoXChofer of filteredAndOrderedEntities; trackBy: trackId" data-cy="entityTable">
+          <td>{{ agregadoXChofer.cantidadChorfer}}</td>
+          <td>{{ agregadoXChofer.nombre }}</td>
+          <td>{{ agregadoXChofer.chapa }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

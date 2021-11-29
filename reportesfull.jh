@@ -1,0 +1,185 @@
+entity Equipo{
+chapilla String unique
+clase Clase
+modelo String
+codigo  String unique
+chapa String unique
+estado Estado
+anno Integer
+ueb UEB
+marca String
+}
+
+
+
+
+
+
+/*cantidad de vehiculos por modelo*/
+entity CantidadXModelo{
+cantidadModelo Integer
+modelo String
+}
+
+/*cantidad de vehiculos por modelo*/
+entity CantidadXUEB{
+cantidadModelo Integer
+ueb String
+}
+
+/*cantidad de vehiculos por marca*/
+entity CantidadXMarca{
+cantidadMarca Integer
+modelo String
+}
+
+/*agregado por chofer*/
+entity AgregadoXChofer{
+    cantidadChorfer Integer
+    chapa String
+    nombre String
+}
+
+
+
+/*Entrega de lubricante por ueb*/
+entity LUBRICANTEXTIPO{
+cantidadLubricante Integer
+lubricante String
+}
+
+/*Entrega de lubricante por ueb*/
+entity LUBRICANTEXUEB{
+cantidadLubricanteUEB Integer
+ueb String
+}
+
+/*Entrega de conbustible por ueb*/
+entity COMBUSTIBLEXUEB{
+cantidadCombustibleUEB Integer
+ueb String
+}
+
+
+/*
+Cantidad de vehiculos agrupados por tipo y UEB
+--ver si se puede hacer grafico
+*/
+entity CANTIDADXTIPOUEB{
+cantidadTipoUEB Integer
+tipoCarro String
+ueb String
+}
+
+/*
+Cantidad de vehiculos agrupados por tipo
+--ver si se puede hacer grafico
+*/
+entity CANTIDADXTIPO{
+cantidadTipo Integer
+tipo String
+}
+
+
+
+/*
+entrega de combustible en litros de vehiculos agrupados por tipo
+--ver si se puede hacer grafico
+*/
+entity ENTREGAXTIPO{
+cantidad Integer
+tipo String
+}
+
+
+
+entity Recurso{
+nombre String
+um UnidadDeMedida
+tipo TipoRecurso
+}
+
+entity Asignacion{
+//responsable
+fecha Instant
+cantidad Float
+
+}
+entity Chofer{
+nombre String
+licencia Licencia
+
+}
+
+enum Licencia{
+A_1,
+A,
+B,
+C_1,
+C,
+D_1,
+D,
+E,
+F,
+E
+}
+
+entity Motor{
+codigo String unique
+estado  Estado
+marca String
+}
+
+
+enum UnidadDeMedida {
+    LITRO,
+    METRO,
+    UNIDAD,
+    KG,
+    METRO_CUADRADO
+
+}
+enum TipoRecurso {
+    PARTE,
+    PIEZA,
+    AGREGADOMAYOR,
+    AGREGADOMENOR,
+    COMBUSTIBLE,
+    INSUMO,
+    LUBRICANTE
+
+
+}
+
+
+
+enum Clase {
+    LIGERO,PESADO,COMPLEMENTARIO
+}
+enum UEB {
+    PROYECTO, COES, MONTAJE, LOGISTICA, CIEGO, HOLGUIN, SANTIAGO, OC
+}
+
+enum Estado {
+    BUENO, REGULAR, MALO, NO_DESCRITO
+}
+
+
+
+
+
+
+
+relationship OneToMany{
+
+Chofer to Asignacion
+Recurso to Asignacion
+}
+
+
+relationship OneToOne {
+    Equipo{motor(codigo)} to Motor
+    Equipo{chofer(nombre)} to Chofer
+
+}
+

@@ -1,0 +1,25 @@
+{
+  "tesisApp": {
+    "lUBRICANTEXTIPO": {
+      "home": {
+        "title": "Lubricantes por tipo",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new LUBRICANTEXTIPO",
+        "createOrEditLabel": "Create or edit a LUBRICANTEXTIPO",
+        "notFound": "No LUBRICANTEXTIPOS found"
+      },
+      "created": "A new LUBRICANTEXTIPO is created with identifier {{ param }}",
+      "updated": "A LUBRICANTEXTIPO is updated with identifier {{ param }}",
+      "deleted": "A LUBRICANTEXTIPO is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete LUBRICANTEXTIPO {{ id }}?"
+      },
+      "detail": {
+        "title": "LUBRICANTEXTIPO"
+      },
+      "id": "ID",
+      "cantidadLubricante": "Cantidad Lubricante",
+      "lubricante": "Lubricante"
+    }
+  }
+}

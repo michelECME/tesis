@@ -1,0 +1,26 @@
+{
+  "tesisApp": {
+    "agregadoXChofer": {
+      "home": {
+        "title": "Agregado X Chofers",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Agregado X Chofer",
+        "createOrEditLabel": "Crear o editar Agregado X Chofer",
+        "notFound": "Ningún Agregado X Chofers encontrado"
+      },
+      "created": "Un nuevo Agregado X Chofer ha sido creado con el identificador {{ param }}",
+      "updated": "Un Agregado X Chofer ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Agregado X Chofer ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Agregado X Chofer {{ id }}?"
+      },
+      "detail": {
+        "title": "Agregado X Chofer"
+      },
+      "id": "ID",
+      "cantidadChorfer": "Cantidad Chorfer",
+      "chapa": "Chapa",
+      "nombre": "Nombre"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "tesisApp": {
+    "Clase": {
+      "null": "",
+      "LIGERO": "LIGERO",
+      "PESADO": "PESADO",
+      "COMPLEMENTARIO": "COMPLEMENTARIO"
+    }
+  }
+}

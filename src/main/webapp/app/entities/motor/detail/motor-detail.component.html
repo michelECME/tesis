@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="motor">
+      <h2 data-cy="motorDetailsHeading"><span jhiTranslate="tesisApp.motor.detail.title">Motor</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ motor.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.motor.codigo">Codigo</span></dt>
+        <dd>
+          <span>{{ motor.codigo }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.motor.estado">Estado</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'tesisApp.Estado.' + motor.estado }}">{{ motor.estado }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.motor.marca">Marca</span></dt>
+        <dd>
+          <span>{{ motor.marca }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/motor', motor.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

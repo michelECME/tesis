@@ -1,0 +1,105 @@
+<div>
+  <h2 id="page-heading" data-cy="AsignacionHeading">
+    <span>Asignaciones</span>
+
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="tesisApp.asignacion.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-asignacion"
+        [routerLink]="['/asignacion/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span>  Asignar </span>
+      </button>
+    </div>
+  </h2>
+
+
+  <div class="modal-header">
+    <h4 class="modal-title" data-cy="asignacionDeleteDialogHeading" jhiTranslate="entity.delete.title">Error en captura
+      de datos</h4>
+
+
+  </div>
+
+  <div class="modal-body">
+    <jhi-alert-error></jhi-alert-error>
+
+    <p>
+      Los choferes solo pueden tener bajo su custodia un equipo.
+    </p>
+  </div>
+
+  <jhi-alert-error></jhi-alert-error>
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="asignacions?.length === 0">
+    <span jhiTranslate="tesisApp.asignacion.home.notFound">No asignacions found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="asignacions && asignacions.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+      <tr>
+        <th scope="col"><span jhiTranslate="tesisApp.asignacion.fecha">Fecha</span></th>
+        <th scope="col"><span jhiTranslate="tesisApp.asignacion.cantidad">Cantidad</span></th>
+        <th scope="col"><span jhiTranslate="tesisApp.asignacion.chofer">Chofer</span></th>
+        <th scope="col"><span jhiTranslate="tesisApp.asignacion.recurso">Recurso</span></th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let asignacion of asignacions; trackBy: trackId" data-cy="entityTable">
+        <td>{{ asignacion.fecha | formatMediumDatetime }}</td>
+        <td>{{ asignacion.cantidad }}</td>
+        <td>
+          <div *ngIf="asignacion.chofer">
+            <a [routerLink]="['/chofer', asignacion.chofer?.id, 'view']">{{ asignacion.chofer?.nombre }}</a>
+          </div>
+        </td>
+        <td>
+          <div *ngIf="asignacion.recurso">
+            <a [routerLink]="['/recurso', asignacion.recurso?.id, 'view']">{{ asignacion.recurso?.nombre }}</a>
+          </div>
+        </td>
+        <td class="text-right">
+          <div class="btn-group">
+            <button
+              type="submit"
+              [routerLink]="['/asignacion', asignacion.id, 'view']"
+              class="btn btn-info btn-sm"
+              data-cy="entityDetailsButton"
+            >
+              <fa-icon icon="eye"></fa-icon>
+              <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+            </button>
+
+            <button
+              type="submit"
+              [routerLink]="['/asignacion', asignacion.id, 'edit']"
+              class="btn btn-primary btn-sm"
+              data-cy="entityEditButton"
+            >
+              <fa-icon icon="pencil-alt"></fa-icon>
+              <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+
+            <button *jhiHasAnyAuthority="'ROLE_ADMIN'" type="submit" (click)="delete(asignacion)"
+                    class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+              <fa-icon icon="times"></fa-icon>
+              <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+            </button>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

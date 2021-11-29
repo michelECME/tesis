@@ -1,0 +1,25 @@
+{
+  "tesisApp": {
+    "cOMBUSTIBLEXUEB": {
+      "home": {
+        "title": "Combustibles por UEB",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new COMBUSTIBLEXUEB",
+        "createOrEditLabel": "Create or edit a COMBUSTIBLEXUEB",
+        "notFound": "No COMBUSTIBLEXUEBS found"
+      },
+      "created": "A new COMBUSTIBLEXUEB is created with identifier {{ param }}",
+      "updated": "A COMBUSTIBLEXUEB is updated with identifier {{ param }}",
+      "deleted": "A COMBUSTIBLEXUEB is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete COMBUSTIBLEXUEB {{ id }}?"
+      },
+      "detail": {
+        "title": "COMBUSTIBLEXUEB"
+      },
+      "id": "ID",
+      "cantidadCombustibleUEB": "Cantidad Combustible UEB",
+      "ueb": "Ueb"
+    }
+  }
+}

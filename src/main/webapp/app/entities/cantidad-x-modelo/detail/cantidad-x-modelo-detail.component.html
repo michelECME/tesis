@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="cantidadXModelo">
+      <h2 data-cy="cantidadXModeloDetailsHeading"><span jhiTranslate="tesisApp.cantidadXModelo.detail.title">Cantidad X Modelo</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ cantidadXModelo.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.cantidadXModelo.cantidadModelo">Cantidad Modelo</span></dt>
+        <dd>
+          <span>{{ cantidadXModelo.cantidadModelo }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.cantidadXModelo.modelo">Modelo</span></dt>
+        <dd>
+          <span>{{ cantidadXModelo.modelo }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/cantidad-x-modelo', cantidadXModelo.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

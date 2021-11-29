@@ -1,0 +1,25 @@
+{
+  "tesisApp": {
+    "cANTIDADXTIPO": {
+      "home": {
+        "title": "Cantidad por tipo",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new CANTIDADXTIPO",
+        "createOrEditLabel": "Create or edit a CANTIDADXTIPO",
+        "notFound": "No CANTIDADXTIPOS found"
+      },
+      "created": "A new CANTIDADXTIPO is created with identifier {{ param }}",
+      "updated": "A CANTIDADXTIPO is updated with identifier {{ param }}",
+      "deleted": "A CANTIDADXTIPO is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete CANTIDADXTIPO {{ id }}?"
+      },
+      "detail": {
+        "title": "CANTIDADXTIPO"
+      },
+      "id": "ID",
+      "cantidadTipo": "Cantidad Tipo",
+      "tipo": "Tipo"
+    }
+  }
+}

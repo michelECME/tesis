@@ -1,0 +1,26 @@
+{
+  "tesisApp": {
+    "cANTIDADXTIPOUEB": {
+      "home": {
+        "title": "CANTIDADXTIPOUEBS",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo CANTIDADXTIPOUEB",
+        "createOrEditLabel": "Crear o editar CANTIDADXTIPOUEB",
+        "notFound": "Ningún CANTIDADXTIPOUEBS encontrado"
+      },
+      "created": "Un nuevo CANTIDADXTIPOUEB ha sido creado con el identificador {{ param }}",
+      "updated": "Un CANTIDADXTIPOUEB ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un CANTIDADXTIPOUEB ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar CANTIDADXTIPOUEB {{ id }}?"
+      },
+      "detail": {
+        "title": "CANTIDADXTIPOUEB"
+      },
+      "id": "ID",
+      "cantidadTipoUEB": "Cantidad Tipo UEB",
+      "tipoCarro": "Tipo Carro",
+      "ueb": "Ueb"
+    }
+  }
+}

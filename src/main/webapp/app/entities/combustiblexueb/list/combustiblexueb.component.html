@@ -1,0 +1,41 @@
+<div>
+  <h2 id="page-heading" data-cy="COMBUSTIBLEXUEBHeading">
+    <span >Entrega de combustibles por UEB</span>
+
+    
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+  <div id ="chart" style="text-align:center">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xaxis"
+      [title]="chartOptions.title"
+    ></apx-chart>
+  </div>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="cOMBUSTIBLEXUEBS?.length === 0">
+    <span jhiTranslate="tesisApp.cOMBUSTIBLEXUEB.home.notFound">No cOMBUSTIBLEXUEBS found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="cOMBUSTIBLEXUEBS && cOMBUSTIBLEXUEBS.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="tesisApp.cOMBUSTIBLEXUEB.cantidadCombustibleUEB">Cantidad Combustible UEB</span></th>
+          <th scope="col"><span jhiTranslate="tesisApp.cOMBUSTIBLEXUEB.ueb">Ueb</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cOMBUSTIBLEXUEB of cOMBUSTIBLEXUEBS; trackBy: trackId" data-cy="entityTable">
+          <td>{{ cOMBUSTIBLEXUEB.cantidadCombustibleUEB }}</td>
+          <td>{{ cOMBUSTIBLEXUEB.ueb }}</td>
+         </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

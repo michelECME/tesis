@@ -1,0 +1,53 @@
+<div>
+  <h2 id="page-heading" data-cy="LUBRICANTEXTIPOHeading">
+    <span >Entrega de lubicantes por tipo</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="tesisApp.lUBRICANTEXTIPO.home.refreshListLabel">Refresh List</span>
+      </button>
+
+     
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+  <div id ="chart" style="text-align:center">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xaxis"
+      [title]="chartOptions.title"
+    ></apx-chart>
+  </div>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="lUBRICANTEXTIPOS?.length === 0">
+    <span jhiTranslate="tesisApp.lUBRICANTEXTIPO.home.notFound">No lUBRICANTEXTIPOS found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="lUBRICANTEXTIPOS && lUBRICANTEXTIPOS.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
+          <th scope="col"><span jhiTranslate="tesisApp.lUBRICANTEXTIPO.cantidadLubricante">Cantidad Lubricante</span></th>
+          <th scope="col"><span jhiTranslate="tesisApp.lUBRICANTEXTIPO.lubricante">Lubricante</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lUBRICANTEXTIPO of lUBRICANTEXTIPOS; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/lubricantextipo', lUBRICANTEXTIPO.id, 'view']">{{ lUBRICANTEXTIPO.id }}</a>
+          </td>
+          <td>{{ lUBRICANTEXTIPO.cantidadLubricante }}</td>
+          <td>{{ lUBRICANTEXTIPO.lubricante }}</td>
+        
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

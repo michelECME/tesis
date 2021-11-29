@@ -1,0 +1,36 @@
+<div>
+  <h2 id="page-heading" data-cy="CANTIDADXTIPOUEBHeading">
+    <span >Cantidad de equipos por tipo en cada UEB</span>
+
+  
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+ 
+  <div class="alert alert-warning" id="no-result" *ngIf="cANTIDADXTIPOUEBS?.length === 0">
+    <span jhiTranslate="tesisApp.cANTIDADXTIPOUEB.home.notFound">No cANTIDADXTIPOUEBS found</span>
+  </div>
+ 
+
+  <div class="table-responsive" id="entities" *ngIf="cANTIDADXTIPOUEBS && cANTIDADXTIPOUEBS.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="tesisApp.cANTIDADXTIPOUEB.cantidadTipoUEB">Cantidad Tipo UEB</span></th>
+          <th scope="col"><span jhiTranslate="tesisApp.cANTIDADXTIPOUEB.tipoCarro">Tipo Carro</span></th>
+          <th scope="col"><span jhiTranslate="tesisApp.cANTIDADXTIPOUEB.ueb">Ueb</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cANTIDADXTIPOUEB of cANTIDADXTIPOUEBS; trackBy: trackId" data-cy="entityTable">
+          <td>{{ cANTIDADXTIPOUEB.cantidadTipoUEB }}</td>
+          <td>{{ cANTIDADXTIPOUEB.tipoCarro }}</td>
+          <td>{{ cANTIDADXTIPOUEB.ueb }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

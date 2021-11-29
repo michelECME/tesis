@@ -1,0 +1,25 @@
+{
+  "tesisApp": {
+    "eNTREGAXTIPO": {
+      "home": {
+        "title": "ENTREGAXTIPOS",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo ENTREGAXTIPO",
+        "createOrEditLabel": "Crear o editar ENTREGAXTIPO",
+        "notFound": "Ningún ENTREGAXTIPOS encontrado"
+      },
+      "created": "Un nuevo ENTREGAXTIPO ha sido creado con el identificador {{ param }}",
+      "updated": "Un ENTREGAXTIPO ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un ENTREGAXTIPO ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar ENTREGAXTIPO {{ id }}?"
+      },
+      "detail": {
+        "title": "ENTREGAXTIPO"
+      },
+      "id": "ID",
+      "cantidad": "Cantidad",
+      "tipo": "Tipo"
+    }
+  }
+}

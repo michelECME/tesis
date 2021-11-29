@@ -1,0 +1,58 @@
+<div>
+  <h2 id="page-heading" data-cy="CantidadXMarcaHeading">
+    <span >Cantidad de equipos por  marca</span>
+
+  
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div id ="chart" style="text-align:center">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xaxis"
+      [title]="chartOptions.title"
+    ></apx-chart>
+  </div>
+  <br/>
+  <br/>
+  <button class="btn btn-info mr-2" (click)="exportAsExcelFile()" [disabled]="isLoading">
+    <fa-icon icon="save" [spin]="isLoading"></fa-icon>
+    <span >Exportar</span>
+  </button>
+  <br/>
+  <br/>
+  
+  <span >Filtro</span>
+  
+
+  <input type="text" [(ngModel)]="filter" (ngModelChange)="filterAndSort()" class="form-control" />
+
+  <div class="alert alert-warning" id="no-result" *ngIf="cantidadXMarcas?.length === 0">
+    <span jhiTranslate="tesisApp.cantidadXMarca.home.notFound">No cantidadXMarcas found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="cantidadXMarcas && cantidadXMarcas.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="orderProp" [(ascending)]="ascending" [callback]="filterAndSort.bind(this)">
+          <th jhiSortBy="cantidad" scope="col"><span >Cantidad</span> <fa-icon icon="sort"></fa-icon></th>
+          <th jhiSortBy="modelo" scope="col"><span >Marca</span> <fa-icon icon="sort"></fa-icon></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        
+          <tr *ngFor="let cantidadXMarca of filteredAndOrderedEntities; trackBy: trackId" data-cy="entityTable">
+          <td>{{ cantidadXMarca.cantidadMarca }}</td>
+          <td>{{ cantidadXMarca.modelo }}</td>
+          <td class="text-right">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

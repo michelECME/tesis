@@ -1,0 +1,76 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="equipo">
+      <h2 data-cy="equipoDetailsHeading"><span jhiTranslate="tesisApp.equipo.detail.title">Equipo</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ equipo.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.chapilla">Chapilla</span></dt>
+        <dd>
+          <span>{{ equipo.chapilla }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.clase">Clase</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'tesisApp.Clase.' + equipo.clase }}">{{ equipo.clase }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.modelo">Modelo</span></dt>
+        <dd>
+          <span>{{ equipo.modelo }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.codigo">Codigo</span></dt>
+        <dd>
+          <span>{{ equipo.codigo }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.chapa">Chapa</span></dt>
+        <dd>
+          <span>{{ equipo.chapa }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.estado">Estado</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'tesisApp.Estado.' + equipo.estado }}">{{ equipo.estado }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.anno">Anno</span></dt>
+        <dd>
+          <span>{{ equipo.anno }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.ueb">Ueb</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'tesisApp.UEB.' + equipo.ueb }}">{{ equipo.ueb }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.marca">Marca</span></dt>
+        <dd>
+          <span>{{ equipo.marca }}</span>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.motor">Motor</span></dt>
+        <dd>
+          <div *ngIf="equipo.motor">
+            <a [routerLink]="['/motor', equipo.motor?.id, 'view']">{{ equipo.motor?.codigo }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="tesisApp.equipo.chofer">Chofer</span></dt>
+        <dd>
+          <div *ngIf="equipo.chofer">
+            <a [routerLink]="['/chofer', equipo.chofer?.id, 'view']">{{ equipo.chofer?.nombre }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/equipo', equipo.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

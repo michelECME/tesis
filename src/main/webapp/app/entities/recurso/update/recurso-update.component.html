@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-recurso-heading" data-cy="RecursoCreateUpdateHeading" jhiTranslate="tesisApp.recurso.home.createOrEditLabel">
+        Create or edit a Recurso
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+     
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="tesisApp.recurso.nombre" for="field_nombre">Nombre</label>
+          <input type="text" class="form-control" name="nombre" id="field_nombre" data-cy="nombre" formControlName="nombre" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="tesisApp.recurso.um" for="field_um">Um</label>
+          <select class="form-control" name="um" formControlName="um" id="field_um" data-cy="um">
+            <option [ngValue]="null">{{ 'tesisApp.UnidadDeMedida.null' | translate }}</option>
+            <option value="LITRO">{{ 'tesisApp.UnidadDeMedida.LITRO' | translate }}</option>
+            <option value="METRO">{{ 'tesisApp.UnidadDeMedida.METRO' | translate }}</option>
+            <option value="UNIDAD">{{ 'tesisApp.UnidadDeMedida.UNIDAD' | translate }}</option>
+            <option value="KG">{{ 'tesisApp.UnidadDeMedida.KG' | translate }}</option>
+            <option value="METRO_CUADRADO">{{ 'tesisApp.UnidadDeMedida.METRO_CUADRADO' | translate }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label">Tipo</label>
+          <select class="form-control" name="tipo" formControlName="tipo" id="field_tipo">
+            <option value="NO DESCRITO">NO DESCRITO</option>
+            <option value="PARTE">PARTE</option>
+            <option value="PIEZA">PIEZA</option>
+            <option value="AGREGADOMAYOR">AGREGADO MAYOR</option>
+            <option value="AGREGADOMENOR">AGREGADO MENOR</option>
+            <option value="INSUMO">INSUMO</option>
+            <option value="COMBUSTIBLE">COMBUSTIBLE</option>
+            <option value="LUBRICANTE">LUBRICANTE</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div>
+  <h2 id="page-heading" data-cy="CantidadXUEBHeading">
+    <span >Cantidad de equipos por UEB</span>
+
+    
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+  <div id ="chart" style="text-align:center">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xaxis"
+      [title]="chartOptions.title"
+    ></apx-chart>
+  </div>
+  <br/>
+  <br/>
+  <button class="btn btn-info mr-2" (click)="exportAsExcelFile()" [disabled]="isLoading">
+    <fa-icon icon="save" [spin]="isLoading"></fa-icon>
+    <span >Exportar</span>
+  </button>
+  <br/>
+  <br/>
+  <span >Filtro</span>
+  
+
+  <input type="text" [(ngModel)]="filter" (ngModelChange)="filterAndSort()" class="form-control" />
+
+  
+  <div class="alert alert-warning" id="no-result" *ngIf="cantidadXUEBS?.length === 0">
+    <span jhiTranslate="tesisApp.cantidadXUEB.home.notFound">No cantidadXUEBS found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="cantidadXUEBS && cantidadXUEBS.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="tesisApp.cantidadXUEB.cantidadModelo">Cantidad Modelo</span></th>
+          <th scope="col"><span jhiTranslate="tesisApp.cantidadXUEB.ueb">Ueb</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cantidadXUEB of cantidadXUEBS; trackBy: trackId" data-cy="entityTable">
+          <td>{{ cantidadXUEB.cantidadModelo }}</td>
+          <td>{{ cantidadXUEB.ueb }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-motor-heading" data-cy="MotorCreateUpdateHeading" jhiTranslate="tesisApp.motor.home.createOrEditLabel">
+        Create or edit a Motor
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+      
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="tesisApp.motor.codigo" for="field_codigo">Codigo</label>
+          <input type="text" class="form-control" name="codigo" id="field_codigo" data-cy="codigo" formControlName="codigo" />
+          <div *ngIf="editForm.get('codigo')!.invalid && (editForm.get('codigo')!.dirty || editForm.get('codigo')!.touched)"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="tesisApp.motor.estado" for="field_estado">Estado</label>
+          <select class="form-control" name="estado" formControlName="estado" id="field_estado" data-cy="estado">
+            <option [ngValue]="null">{{ 'tesisApp.Estado.null' | translate }}</option>
+            <option value="BUENO">{{ 'tesisApp.Estado.BUENO' | translate }}</option>
+            <option value="REGULAR">{{ 'tesisApp.Estado.REGULAR' | translate }}</option>
+            <option value="MALO">{{ 'tesisApp.Estado.MALO' | translate }}</option>
+            <option value="NO_DESCRITO">{{ 'tesisApp.Estado.NO_DESCRITO' | translate }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="tesisApp.motor.marca" for="field_marca">Marca</label>
+          <input type="text" class="form-control" name="marca" id="field_marca" data-cy="marca" formControlName="marca" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

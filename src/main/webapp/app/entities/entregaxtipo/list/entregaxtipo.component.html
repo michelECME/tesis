@@ -1,0 +1,40 @@
+<div>
+  <h2 id="page-heading" data-cy="ENTREGAXTIPOHeading">
+    <span >Entrega por tipo de recurso </span>
+
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+  <div id ="chart" style="text-align:center">
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xaxis"
+      [title]="chartOptions.title"
+    ></apx-chart>
+  </div>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="eNTREGAXTIPOS?.length === 0">
+    <span jhiTranslate="tesisApp.eNTREGAXTIPO.home.notFound">No eNTREGAXTIPOS found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="eNTREGAXTIPOS && eNTREGAXTIPOS.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="tesisApp.eNTREGAXTIPO.cantidad">Cantidad</span></th>
+          <th scope="col"><span jhiTranslate="tesisApp.eNTREGAXTIPO.tipo">Tipo</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let eNTREGAXTIPO of eNTREGAXTIPOS; trackBy: trackId" data-cy="entityTable">
+          <td>{{ eNTREGAXTIPO.cantidad }}</td>
+          <td>{{ eNTREGAXTIPO.tipo }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

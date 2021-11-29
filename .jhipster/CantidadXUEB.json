@@ -1,0 +1,24 @@
+{
+  "name": "CantidadXUEB",
+  "fields": [
+    {
+      "fieldName": "cantidadModelo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "ueb",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "cantidad_xueb",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210503223314"
+}

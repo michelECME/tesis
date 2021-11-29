@@ -1,0 +1,24 @@
+{
+  "name": "COMBUSTIBLEXUEB",
+  "fields": [
+    {
+      "fieldName": "cantidadCombustibleUEB",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "ueb",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "combustiblexueb",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210503223319"
+}

@@ -1,0 +1,14 @@
+{
+  "tesisApp": {
+    "TipoRecurso": {
+      "null": "",
+      "PARTE": "PARTE",
+      "PIEZA": "PIEZA",
+      "AGREGADOMAYOR": "AGREGADOMAYOR",
+      "AGREGADOMENOR": "AGREGADOMENOR",
+      "INSUMO": "INSUMO",
+      "COMBUSTIBLE":"COMBUSTIBLE",
+      "LUBRICANTE": "LUBRICANTE"
+    }
+  }
+}
